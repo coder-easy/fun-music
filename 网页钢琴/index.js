@@ -158,7 +158,7 @@ let clickb=false;//判断播放按钮是否已经按过了，如果已经按过�
          box.style.opacity=1;
          boxup.style.opacity=1;  
          bac.style.opacity=1;
-         },500);
+         },100);
          if(s.indexOf("XIAOLUXIAOLUWXHN")!=-1&&records==0)
          {
              setTimeout(function()
