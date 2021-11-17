@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title></title>
+	<link rel="stylesheet" href="./css/music.css" />
+  <style>
+    .input {
+      position: absolute;
+      z-index: 999;
+      top: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 进度条 -->
+	<div class="progress">
+		<div class="progress2">&nbsp;</div>
+	</div>
+	<div class="btnarea">
+		<div class="line1">
+			<div class="arc1 btn">轻柔</div>
+		</div>
+
+		<div class="line2">
+			<div class="arc2 btn">节奏</div>
+		</div>
+
+		<div class="line3">
+			<div class="arc3 btn">DJ</div>
+		</div>
+
+		<div class="line4">
+			<div class="arc4 btn">纯音乐</div>
+		</div>
+
+		<div class="line5">
+			<div class="arc5" id="stop_btn">停止</div>
+		</div>
+	</div>
+  <input class="input" type="file" accept=".mp3">
+
+	<div class="div1">
+
+		<ul class="oUl">
+
+			<li>
+				<img src="./img/1-1.png">
+			</li>
+			<li>
+				<img src="./img/2-2.png">
+			</li>
+			<li>
+				<img src="./img/3-3.png">
+			</li>
+			<li>
+				<img src="./img/4-4.png">
+			</li>
+			<li>
+				<img src="./img/5-5.png">
+			</li>
+			<li>
+				<img src="./img/6-6.png">
+			</li>
+			<li>
+				<img src="./img/7-7.png">
+			</li>
+		</ul>
+	</div>
+
+	<script src="./js/mTween.js"></script>
+	<script src="./js/music.js"></script>
+  <!-- <script src="./js/storage.js"></script> -->
+  <script>
+    const local = {
+      setItem (key, value) {
+        const storage = this.getStorage()
+        storage[key] = value
+        window.localStorage.setItem('music', JSON.stringify(storage))
+      },
+      getItem (key) {
+        return this.getStorage()[key]
+      },
+      getStorage () {
+        return JSON.parse(window.localStorage.getItem('music') || '{}')
+      },
+      clearItem (key) {
+        const storage = this.getStorage()
+        delete storage[key]
+        window.localStorage.setItem('music', JSON.stringify(storage))
+      },
+      clearAll () {
+        window.localStorage.clear()
+      }
+    }
+  </script>
+  <script>
+    // let audio = null
+    // let musicList = [
+    //     './resource/mo.mp3',
+    //     './resource/Rihanna - Only Girl (In The World).mp3',
+    //     './resource/Remix.mp3',
+    //     './resource/Neptune Illusion Dennis Kuo .mp3'
+    // ];
+    // local.setItem('defaultList', musicList)
+    // const file = document.querySelector("input[type=file]")
+    // file.onchange = () => {
+    //             // 获取里面上传的内容 -> 返回的是一个伪数组
+    //             let fileData = file.files[0];
+    //             console.log(fileData);
+    //             image = window.URL.createObjectURL(fileData);
+    //             local.setItem(fileData.name, image)
+
+    //             audio = new Audio();
+    //             // audio.addEventListener('canplay', play);
+    //             audio.src = image;
+
+    //             audio.play()
+    //         };
+  </script>
+</body>
+
+</html>

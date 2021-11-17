@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ch-ZN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+  <link href="https://cdn.bootcss.com/font-awesome/5.13.0/css/all.css"rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+  <title>见到你，便是三行情诗</title>
+  <link rel = "icon" href = "./img/title.ico">
+</head>
+<body>
+  <!-- 背景的 -->
+  <div id="bac"></div>
+
+
+  <div id="yinyan">
+    <h2 id="chunfeng">点击按钮<br>开始创作</h2>
+    <div  id="play" class="btn1 fas fa-play">
+      <div id="bji" class="bj"></div>
+      
+      <div class="fr" id="fronclick" onclick="funclick()"></div>
+    </div>
+  </div>
+
+  <!-- 每个页面上面显示的文字 -->
+  <div id="boxup">&nbsp;&nbsp;啊对对队&nbsp;--->&nbsp;趣玩音乐&nbsp;</div>
+
+
+  <!-- 首页 -->
+  <div id="box">
+    <div id="boxl">F L</div>
+    <div id="boxr"><br><h3>听到了吗</h3><br>触击过后那一声钢琴键,这是我初见你时的心声。<br><br>我的世界已开满花<br><br>所以.....试着开始创作吧。</div>
+  </div>
+  
+
+  <div id="box1"></div>
+
+
+<div class="middle">
+  <!-- <div id="play_ready">播放</div> -->
+  <div class="layer">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span class="iconfont icon-bofang"></span>
+  </div>
+  <div class="text" id="play_ready">播放</div>
+
+
+  <!-- <div id="downloadDiv">下载</div> -->
+    <div class="layer">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span class="iconfont icon-bofang"></span>
+    </div>
+    <div class="text" id="downloadDiv">下载</div>
+
+
+
+  <!-- <div id="begin_next">创作下一首</div> -->
+  <div class="layer">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span class="iconfont icon-bofang"></span>
+  </div>
+  <div class="text" id="begin_next">创作下一首</div>
+
+</div>
+  
+
+  <audio controls class="audio-player"></audio>
+
+  <!-- <button class="downloadButton">下载</button> -->
+
+  <script src="index.js"></script>
+</body>
+</html>
