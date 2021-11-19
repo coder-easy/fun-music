@@ -3,38 +3,32 @@
     <Danmaku />
     <div class="bottom-wrap">
       <Piano @[PLAY_PIANO]="handlePlayPiano" />
-      <ActionPanel
-        :isRecord="isRecord"
-        :isPlay="isPlay"
-        @[START_RECORD]="handleStartRecord"
-        @[STOP_RECORD]="handleStopRecord"
-        @[PLAY_MUSIC]="handlePlayMusic"
-        @[STOP_MUSIC]="handleStopMusic"
-      />
+      <ActionPanel :isRecord="isRecord"
+                   :isPlay="isPlay"
+                   @[START_RECORD]="handleStartRecord"
+                   @[STOP_RECORD]="handleStopRecord"
+                   @[PLAY_MUSIC]="handlePlayMusic"
+                   @[STOP_MUSIC]="handleStopMusic" />
       <div class="right-wrap">
         <DanmakuSend />
         <div class="card-wrap">
-          <List
-            @[LIST_CLICK]="handleSelectMusic"
-            style="--bg: #e6f7ff; --hightlight-bg: #91d5ff"
-          >
-            <li
-              class="list-item"
-              :class="{ selected: item.selected }"
-              :data-idx="item.idx"
-              v-for="item of allMusicData"
-              :key="item.idx"
-            >
+          <List @[LIST_CLICK]="handleSelectMusic"
+                style="--bg: #e6f7ff; --hightlight-bg: #91d5ff">
+            <li class="list-item"
+                :class="{ selected: item.selected }"
+                :data-idx="item.idx"
+                v-for="item of allMusicData"
+                :key="item.idx">
               [{{ item.time }}] {{ item.user }}创建的音乐
             </li>
           </List>
           <!-- music list -->
 
-          <List
-            class="user-list"
-            style="--bg: #66a9c9; --hightlight-bg: #1781b5; --color: #fff"
-          >
-            <li class="list-item" v-for="item of userList" :key="item.idx">
+          <List class="user-list"
+                style="--bg: #66a9c9; --hightlight-bg: #1781b5; --color: #fff">
+            <li class="list-item"
+                v-for="item of userList"
+                :key="item.idx">
               [{{ item.time }}] {{ item.user
               }}{{ item.type ? "离开" : "进入" }}房间
             </li>

@@ -158,8 +158,8 @@ body{
 .play .icons a:nth-child(2) .layer span,
 .play .icons a:nth-child(2) .text
 {
-  color:#FFD166;
-  border-color: #FFD166;
+  color:#6242ee;
+  border-color: #6242ee;
 }
 
 .play .icons a:nth-child(3) .layer span,
@@ -181,7 +181,7 @@ body{
 }
 
 .play .icons a:hover:nth-child(2) .layer span{
-  box-shadow: -1px 1px 3px #FFD166;
+  box-shadow: -1px 1px 3px #6242ee;
 }
 
 .play .icons a:hover:nth-child(3) .layer span{
